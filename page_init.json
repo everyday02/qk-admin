@@ -1,0 +1,28 @@
+{
+    "pages": [
+        {
+            "path": "pages/project/add",
+            "style": {
+                "navigationBarTitleText": "新增"
+            }
+        },
+        {
+            "path": "pages/project/edit",
+            "style": {
+                "navigationBarTitleText": "编辑"
+            }
+        },
+        {
+            "path": "pages/project/list",
+            "style": {
+                "navigationBarTitleText": "列表"
+            }
+        },
+        {
+            "path": "pages/project/detail",
+            "style": {
+                "navigationBarTitleText": "详情"
+            }
+        }
+    ]
+}

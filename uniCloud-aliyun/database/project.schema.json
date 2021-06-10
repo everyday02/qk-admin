@@ -1,0 +1,93 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"permission": {
+		"read": true,
+		"create": true,
+		"update": true,
+		"delete": true,
+		"count": true
+	},
+	"required": ["project_no", "title", "user_id", "created_at"],
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"project_no": {
+			"title": "项目编号",
+			"trim": "both",
+			"bsonType": "string",
+			"maxLength": 30,
+			"description": "项目编号，自动生成，更好记"
+		},
+		"title": {
+			"title": "项目标题",
+			"bsonType": "string",
+			"trim": "both",
+			"maxLength": 30
+		},
+		"desc": {
+			"title": "项目简介",
+			"bsonType": "string",
+			"maxLength": 1000
+		},
+		"rate": {
+			"title": "评星",
+			"bsonType": "int",
+			"maxLength": 5
+		},
+		"tags": {
+			"title": "标签",
+			"bsonType": "string",
+			"trim": "both",
+			"maxLength": 200
+		},
+		"platform": {
+			"title": "归属平台标识",
+			"bsonType": "int"
+		},
+		"href": {
+			"title": "链接地址",
+			"trim": "both",
+			"bsonType": "string"
+		},
+		"user_id": {
+			"title": "创建用户id",
+			"bsonType": "string",
+			"foreignKey": "uni-id-users._id"
+		},
+		"username": {
+			"title": "创建人",
+			"bsonType": "string"
+		},
+		"avatar": {
+			"title": "用户头像",
+			"bsonType": "string"
+		},
+		"view_count": {
+			"title": "浏览数",
+			"bsonType": "int"
+		},
+		"bookmark_count": {
+			"title": "收藏数",
+			"bsonType": "int"
+		},
+		"comment_count": {
+			"title": "评论数",
+			"bsonType": "int"
+		},
+		"status": {
+			"title": "项目状态",
+			"bsonType": "int",
+			"defaultValue": 0
+		},
+		"created_at": {
+			"title": "创建日期",
+			"bsonType": "date"
+		},
+		"updated_at": {
+			"title": "更新日期",
+			"bsonType": "date"
+		}
+	}
+}
